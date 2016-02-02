@@ -21,6 +21,7 @@
 			    <ul class="nav nav-pills">
 						<li class={% block active_main %}{% endblock %}><a href="{% url 'main' %}">Главная</a></li>
 						<li class={% block active_contact %}{% endblock %}><a href="{% url 'contact' %}">Контакты</a></li>
+						<li class={% block active_clothes %}{% endblock %}><a href="{% url 'clothes:all_clothes' %}">Магазин</a></li>
 					</ul>	
 			</div>
 		</div>
