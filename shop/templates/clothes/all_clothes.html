@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+
+{% load staticfiles %}
+
+
+{% block title %}Clothes{% endblock title %}
+
+
+{% block active_clothes %}active{% endblock active_clothes %}
+
+
+{% block content %}
+	<div class="container">
+		<div class="jumbotron">
+			<p>Одежда</p>
+		</div>
+		{% for jacket in clothes %}
+			<p>{{ jacket.name }}</p>
+			<p>{{ jacket.short_description }}</p>
+			<img src="/static/images/{{ jacket.image_number }}.jpg">
+		{% endfor %}
+	</div>
+{% endblock content %}
