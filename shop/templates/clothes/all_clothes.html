@@ -16,9 +16,19 @@
 			<p>Одежда</p>
 		</div>
 		{% for jacket in clothes %}
-			<p>{{ jacket.name }}</p>
-			<p>{{ jacket.short_description }}</p>
-			<img src="/static/images/{{ jacket.image_number }}.jpg">
+			<div class="jumbotron">
+				<p>{{ jacket.name }}</p>
+				<p>{{ jacket.short_description }}</p>
+				<img src="/static/images/{{ jacket.image_number }}.jpg">
+				<br>
+				<br>
+				<a href="{% url 'clothes:detail' jacket.id %}">
+					<button type="button" class="btn btn-default btn-lg">
+						<span aria-hidden="true">
+						</span> Cмотреть
+					</button>
+				</a>
+			</div>
 		{% endfor %}
 	</div>
 {% endblock content %}
