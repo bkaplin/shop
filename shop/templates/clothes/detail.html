@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+
+{% load staticfiles %}
+
+
+{% block title %}Detail{% endblock title %}
+
+
+{% block active_clothes %}active{% endblock active_clothes %}
+
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>
+								<div class="jumbotron">
+									<p>{{ jacket.name }}</p>
+								</div>
+								<div class="jumbotron">
+									<img src="/static/images/{{ jacket.image_number }}.jpg">
+									<br>
+									<br>
+									<p>{{ jacket.description }}</p>
+								</div>
+							</th>
+							<td>
+								<div class="jumbotron">
+									<p>Купить</p>
+								</div>
+							</td>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+	</div>
+{% endblock content %}
